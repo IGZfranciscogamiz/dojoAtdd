@@ -2,11 +2,11 @@
 
 module.exports = function() {
 
-  this.Before(function (callback) {
+	this.Before(function(callback) {
 
-  });
+	});
 
-  this.After(function(callback) {
+	this.After(function(callback) {
 
-  });
+	});
 };

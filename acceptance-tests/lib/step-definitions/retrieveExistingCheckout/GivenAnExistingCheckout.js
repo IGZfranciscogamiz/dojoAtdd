@@ -4,7 +4,7 @@ const requestPromise = require('request-promise');
 
 module.exports = function() {
 
-    this.Given(/^an existing checkout with code "([^"]*)"$/, function (code, done) {
+    this.Given(/^an existing checkout with code "([^"]*)"$/, function(code, done) {
         const world = this;
         const options = {
             method: 'POST',
@@ -16,7 +16,7 @@ module.exports = function() {
         };
 
         requestPromise(options)
-            .then(function (response) {
+            .then(function(response) {
                 response.statusCode.should.equal(201);
                 response.headers.location.should.be.equal('http://localhost:3000/api/checkouts/' + code);
 
@@ -24,7 +24,7 @@ module.exports = function() {
 
                 done();
             })
-            .catch(function (err) {
+            .catch(function(err) {
                 done(err);
             });
     });

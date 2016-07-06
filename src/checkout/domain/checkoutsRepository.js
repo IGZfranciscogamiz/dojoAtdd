@@ -26,4 +26,3 @@ function retrieve(id) {
 function clear() {
     checkoutMap = {};
 }
-

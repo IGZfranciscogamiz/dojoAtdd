@@ -4,7 +4,7 @@ const requestPromise = require('request-promise');
 
 module.exports = function() {
 
-    this.When(/^a supermarket clerk want consult the current state the checkout "([^"]*)"$/, function (code, done) {
+    this.When(/^a supermarket clerk want consult the current state the checkout "([^"]*)"$/, function(code, done) {
         const world = this;
         const options = {
             method: 'GET',
@@ -14,11 +14,11 @@ module.exports = function() {
         };
 
         requestPromise(options)
-            .then(function (response) {
+            .then(function(response) {
                 world.publishValue('checkoutRequestResponse', response);
                 done();
             })
-            .catch(function (err) {
+            .catch(function(err) {
                 done(err);
             });
     });

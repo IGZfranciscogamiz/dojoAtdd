@@ -4,7 +4,7 @@ require('chai').should();
 
 module.exports = function() {
 
-    this.Then(/^a new checkout is created with "([^"]*)" in the total value$/, function (total, done) {
+    this.Then(/^a new checkout is created with "([^"]*)" in the total value$/, function(total, done) {
         const world = this;
 
         const response = world.getValue('checkoutCreationResponse');
